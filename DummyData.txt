@@ -1,0 +1,182 @@
+INSERT INTO Cast (id, name, about, profile_Link) VALUES
+(1, 'Amitabh Bachchan', 'Indian actor known for his deep baritone voice and versatile acting.', 'https://example.com/amitabh-profile'),
+(2, 'Priyanka Chopra', 'Indian actress and singer, known for her work in Bollywood and Hollywood.', 'https://example.com/priyanka-profile'),
+(3, 'Shah Rukh Khan', 'Famous Bollywood actor known as the King of Romance.', 'https://example.com/srk-profile'),
+(4, 'Deepika Padukone', 'Indian actress known for her powerful performances in Bollywood films.', 'https://example.com/deepika-profile'),
+(5, 'Rajinikanth', 'South Indian superstar known for his style and action movies.', 'https://example.com/rajinikanth-profile');
+
+
+INSERT INTO cast_occupation (cast_id, occupation) VALUES
+(1, 'Actor'), (1, 'Producer'),
+(2, 'Actor'), (2, 'Singer'), (2, 'Philanthropist'),
+(3, 'Actor'), (3, 'Producer'),
+(4, 'Actor'), (4, 'Producer'),
+(5, 'Actor');
+
+
+INSERT INTO Location (city, region, pin, address, latitude, longitude) VALUES
+('Mumbai', 'Maharashtra', '400001', '123 Marine Drive, Mumbai', 18.9358, 72.8240),
+('Delhi', 'Delhi', '110001', 'Rajpath Marg, New Delhi', 28.6139, 77.2090),
+('Bangalore', 'Karnataka', '560001', 'MG Road, Bangalore', 12.9716, 77.5946),
+('Hyderabad', 'Telangana', '500001', 'Charminar, Hyderabad', 17.3616, 78.4747),
+('Chennai', 'Tamil Nadu', '600001', 'Marina Beach Road, Chennai', 13.0827, 80.2707);
+
+INSERT INTO movie (id, movie_name, movie_year, movie_duration, movie_description) VALUES
+    (1, 'The Indian Epic', '2022', 2.5, 'An epic tale of heroism and loyalty set in ancient India.'),
+    (2, 'Mystic Hills', '2023', 1.8, 'A thriller unraveling secrets hidden within a remote Indian village.'),
+    (3, 'Tech Giants', '2021', 2.0, 'A documentary on India’s booming tech industry.'),
+    (4, 'Freedom Struggle', '2020', 3.0, 'The untold stories of India’s struggle for independence.'),
+    (5, 'City of Dreams', '2024', 1.5, 'An inspiring drama about pursuing dreams in the fast-paced city of Mumbai.');
+
+
+INSERT INTO movie_media_links (movie_id, media_links) VALUES
+    (1, 'https://example.com/indian_epic_trailer.mp4'),
+    (2, 'https://example.com/mystic_hills_trailer.mp4'),
+    (3, 'https://example.com/tech_giants_trailer.mp4'),
+    (4, 'https://example.com/freedom_struggle_trailer.mp4'),
+    (5, 'https://example.com/city_of_dreams_trailer.mp4');
+	
+INSERT INTO movie_movie_language (movie_id, movie_language) VALUES
+    (1, 'Hindi'),
+    (1, 'English'),
+    (2, 'Tamil'),
+    (3, 'English'),
+    (4, 'Hindi'),
+    (5, 'Marathi');
+	
+INSERT INTO movie_genres (movie_id, genres) VALUES
+    (1, 'Historical'),
+    (1, 'Drama'),
+    (2, 'Thriller'),
+    (3, 'Documentary'),
+    (4, 'Biographical'),
+    (5, 'Drama');
+	
+INSERT INTO movie_cast (movie_id, cast_id) VALUES
+    (1, 1),
+    (1, 2),
+    (2, 3),
+    (3, 1),
+    (4, 4),
+    (5, 5);
+	
+INSERT INTO theatre (id, name, total_screens, location_id) VALUES
+    (1, 'PVR Cinemas', 5, 1),
+    (2, 'Inox', 4, 2),
+    (3, 'Cinepolis', 3, 3);
+
+
+
+INSERT INTO user (id, first_name, last_name, username, email, password, phone, role) VALUES
+    (1, 'John', 'Doe', 'johndoe', 'johndoe@example.com', 'password123', '1234567890', 'ADMIN'),
+    (2, 'Jane', 'Smith', 'janesmith', 'janesmith@example.com', 'password123', '0987654321', 'USER'),
+    (3, 'Michael', 'Johnson', 'mjohnson', 'mjohnson@example.com', 'password123', '1122334455', 'USER'),
+    (4, 'Emily', 'Davis', 'emilyd', 'emilyd@example.com', 'password123', '2233445566', 'USER'),
+    (5, 'David', 'Brown', 'davidb', 'davidb@example.com', 'password123', '3344556677', 'USER');
+
+
+<!-------------------------------------------------------->
+
+INSERT INTO User (id, first_Name, last_Name, username, email, password, phone, role)
+VALUES
+  (1, 'John', 'Doe', 'johndoe', 'john@example.com', 'password123', '123-456-7890', 'USER'),
+  (2, 'Jane', 'Smith', 'janesmith', 'jane@example.com', 'password123', '123-456-7891', 'USER'),
+  (3, 'Mike', 'Johnson', 'mikejohnson', 'mike@example.com', 'password123', '123-456-7892', 'USER'),
+  (4, 'Emily', 'Davis', 'emilydavis', 'emily@example.com', 'password123', '123-456-7893', 'USER'),
+  (5, 'Chris', 'Brown', 'chrisbrown', 'chris@example.com', 'password123', '123-456-7894', 'USER');
+
+  
+INSERT INTO Location (id, city, region, pin, address, latitude, longitude)
+VALUES
+  (1, 'New York', 'NY', '10001', '123 Main St', 40.7128, -74.0060),
+  (2, 'Los Angeles', 'CA', '90001', '456 Hollywood Blvd', 34.0522, -118.2437),
+  (3, 'Chicago', 'IL', '60601', '789 Lake Shore Dr', 41.8781, -87.6298),
+  (4, 'Houston', 'TX', '77001', '101 Elm St', 29.7604, -95.3698),
+  (5, 'Phoenix', 'AZ', '85001', '202 Central Ave', 33.4484, -112.0740);
+
+  
+INSERT INTO Theatre (id, name, total_Screens, location_id)
+VALUES
+  (1, 'Regal Cinemas', 5, 1),
+  (2, 'AMC Theatres', 10, 2),
+  (3, 'Cinemark', 8, 3),
+  (4, 'Alamo Drafthouse', 6, 4),
+  (5, 'ArcLight Cinemas', 7, 5);
+
+
+INSERT INTO Screen (id, audio_Type, video_Type, total_Seats, theatre_id)
+VALUES
+  (1, 2, 2, 150, 1),
+  (2, 1, 3, 200, 2),
+  (3, 3, 4, 250, 3),
+  (4, 2, 1, 100, 4),
+  (5, 3, 3, 120, 5);
+
+
+INSERT INTO Movie (id, movie_Name, movie_Year, movie_Duration, movie_Description)
+VALUES
+  (1, 'The Great Adventure', '2025', 120, 'An epic adventure film'),
+  (2, 'Love in Paris', '2025', 90, 'A romantic drama'),
+  (3, 'Mystery in the Woods', '2025', 140, 'A thrilling mystery film'),
+  (4, 'Space Journey', '2025', 130, 'A sci-fi space exploration film'),
+  (5, 'Comedy Night', '2025', 100, 'A hilarious comedy film');
+
+
+
+INSERT INTO Cast (id, name, about, profile_Link)
+VALUES
+  (1, 'John Actor', 'An accomplished actor known for his roles in action films', 'profile_link_1'),
+  (2, 'Jane Actress', 'A renowned actress known for her romantic dramas', 'profile_link_2'),
+  (3, 'Mike Comedian', 'A comedian known for his stand-up acts', 'profile_link_3'),
+  (4, 'Emily Director', 'A director known for her sci-fi movies', 'profile_link_4'),
+  (5, 'Chris Producer', 'A producer known for his blockbuster hits', 'profile_link_5');
+
+
+INSERT INTO Event (id, price_Per_Seat, start_Time, end_Time, date, movie_id, screen_id)
+VALUES
+  (1, 10.00, '18:00', '20:30', '2025-05-01', 1, 1),
+  (2, 8.00, '20:00', '22:00', '2025-05-02', 2, 2),
+  (3, 12.00, '21:00', '23:20', '2025-05-03', 3, 3),
+  (4, 7.50, '16:00', '18:00', '2025-05-04', 4, 4),
+  (5, 9.00, '17:00', '19:30', '2025-05-05', 5, 5);
+
+
+INSERT INTO Seat (id, seat_No, seat_Row, event_id)
+VALUES
+  (1, 1, 'A', 1),
+  (2, 2, 'A', 1),
+  (3, 3, 'B', 2),
+  (4, 4, 'C', 3),
+  (5, 5, 'D', 4),
+  (6, 6, 'E', 5),
+  (7, 7, 'F', 1),
+  (8, 8, 'G', 2),
+  (9, 9, 'H', 3),
+  (10, 10, 'I', 4);
+
+
+INSERT INTO Booking (id, no_Of_Seats, total_Cost, payment_Type, user_id, event_id)
+VALUES
+  (1, 2, 20.00, 1, 1, 1),
+  (2, 3, 24.00, 2, 2, 2),
+  (3, 1, 12.00, 3, 3, 3),
+  (4, 4, 30.00, 2, 4, 4),
+  (5, 5, 40.00, 1, 5, 5);
+  
+INSERT INTO Booking (id, no_Of_Seats, total_Cost, payment_Type, user_id, event_id)
+VALUES
+  (1, 2, 50.00, 'CREDIT_CARD', 1, 1),
+  (2, 4, 100.00, 'PAYPAL', 2, 2),
+  (3, 1, 25.00, 'CASH', 3, 3),
+  (4, 3, 75.00, 'DEBIT_CARD', 1, 2),
+  (5, 5, 125.00, 'CREDIT_CARD', 2, 3),
+  (6, 2, 20.00, 'CREDIT_CARD', 1, 1),
+  (7, 3, 24.00, 'PAYPAL', 2, 2),
+  (8, 1, 12.00, 'CASH', 3, 3),
+  (9, 4, 30.00, 'DEBIT_CARD', 4, 4),
+  (10, 5, 40.00, 'CREDIT_CARD', 5, 5);
+
+
+
+
+
